@@ -71,7 +71,7 @@ nnoremap <C-Left> <C-W><C-H>
 let g:deoplete#enable_at_startup = 1
 
 " Language Server Config
-let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper'] }
+let g:LanguageClient_serverCommands = { }
 let g:LanguageClient_hoverPreview = 'Never'
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>

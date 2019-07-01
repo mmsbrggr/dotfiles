@@ -27,9 +27,6 @@ Plug 'bohlender/vim-smt2'
 " TPTP (Automated Theorem Proving) syntax highlighting
 Plug 'c-cube/vim-tptp'
 
-" Promela (Spin model checker) syntax highlighting
-Plug 'jas14/promela.vim'
-
 " Initialize plugin system
 call plug#end()
 

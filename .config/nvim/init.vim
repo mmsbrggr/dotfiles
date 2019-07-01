@@ -21,6 +21,15 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" SMT-LIB 2 syntax highlighting
+Plug 'bohlender/vim-smt2' 
+
+" TPTP (Automated Theorem Proving) syntax highlighting
+Plug 'c-cube/vim-tptp'
+
+" Promela (Spin model checker) syntax highlighting
+Plug 'jas14/promela.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -71,7 +80,7 @@ nnoremap <C-Left> <C-W><C-H>
 let g:deoplete#enable_at_startup = 1
 
 " Language Server Config
-let g:LanguageClient_serverCommands = { }
+let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper'] }
 let g:LanguageClient_hoverPreview = 'Never'
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -88,13 +97,13 @@ map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 call denite#custom#alias('source', 'file/rec/git', 'file/rec')
 call denite#custom#var('file/rec/git', 'command',
 \ ['git', 'ls-files', '-co', '--exclude-standard'])
-nnoremap <silent> <C-j> :<C-u>Denite buffer
+nnoremap <silent> <C-Space> :<C-u>Denite buffer
 \ `finddir('.git', ';') != '' ? 'file/rec/git' : 'file/rec'`<CR>
 "nnoremap <silent> <C-j> :Denite buffer file<CR>
 
 call denite#custom#map(
 	  \ 'insert',
-	  \ '<C-j>',
+	  \ '<C-Space>',
 	  \ '<denite:enter_mode:normal>',
 	  \ 'noremap'
 	  \)

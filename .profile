@@ -23,3 +23,8 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# add all bin folders in /opt to path
+for directory in /opt/*/bin; do
+    PATH="$PATH":$directory
+done

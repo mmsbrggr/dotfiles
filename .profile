@@ -28,3 +28,4 @@ fi
 for directory in /opt/*/bin; do
     PATH="$PATH":$directory
 done
+

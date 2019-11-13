@@ -83,21 +83,6 @@ nnoremap <C-Left> <C-W><C-H>
 let g:deoplete#enable_at_startup = 1
 
 " Language Server Config
-let g:LanguageClient_serverCommands = {
-            \   'haskell': ['hie-wrapper'],
-            \   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
-            \       using LanguageServer;
-            \       using Pkg;
-            \       import StaticLint;
-            \       import SymbolServer;
-            \       env_path = dirname(Pkg.Types.Context().env.project_file);
-            \       debug = false; 
-            \       
-            \       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, "", Dict());
-            \       server.runlinter = true;
-            \       run(server);
-            \   ']
-            \}
 let g:LanguageClient_hoverPreview = 'Never'
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>

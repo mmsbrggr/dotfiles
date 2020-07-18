@@ -1,13 +1,12 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
 Plug 'mhartington/oceanic-next'
 
 Plug 'scrooloose/nerdtree'
-Plug 'neovimhaskell/haskell-vim'
 
 " Denite for quick navigation of files
 Plug 'Shougo/denite.nvim'
@@ -24,14 +23,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " SMT-LIB 2 syntax highlighting
 Plug 'bohlender/vim-smt2' 
 
-" Julia language support
-Plug 'JuliaEditorSupport/julia-vim'
-
 " Autocomplete manager
 Plug 'ncm2/ncm2'
-
-" TPTP (Automated Theorem Proving) syntax highlighting
-Plug 'c-cube/vim-tptp'
 
 " Initialize plugin system
 call plug#end()

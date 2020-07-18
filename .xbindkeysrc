@@ -1,7 +1,0 @@
-# Back button for logitech mouse
-"xte 'keydown Alt_L' 'keydown Left' 'keyup Left' 'keyup Alt_L'"
-     b:11
-
-# Forward button for logitech mouse
-"xte 'keydown Alt_L' 'keydown Right' 'keyup Right' 'keyup Alt_L'"
-     b:10

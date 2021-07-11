@@ -8,9 +8,6 @@ Plug 'mhartington/oceanic-next'
 
 Plug 'scrooloose/nerdtree'
 
-" Denite for quick navigation of files
-Plug 'Shougo/denite.nvim'
-
 " Language server
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -87,20 +84,4 @@ map <Leader>lb :call LanguageClient#textDocument_references()<CR>
 map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
 map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
-" Denite config
-call denite#custom#alias('source', 'file/rec/git', 'file/rec')
-call denite#custom#var('file/rec/git', 'command',
-\ ['git', 'ls-files', '-co', '--exclude-standard'])
-nnoremap <silent> <C-Space> :<C-u>Denite buffer
-\ `finddir('.git', ';') != '' ? 'file/rec/git' : 'file/rec'`<CR>
-"nnoremap <silent> <C-j> :Denite buffer file<CR>
-
-call denite#custom#map(
-	  \ 'insert',
-	  \ '<C-Space>',
-	  \ '<denite:enter_mode:normal>',
-	  \ 'noremap'
-	  \)
-
 nnoremap <silent> <C-g> :Denite grep<CR>
-

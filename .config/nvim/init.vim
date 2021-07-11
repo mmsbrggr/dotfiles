@@ -16,12 +16,14 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': './install.sh',
     \ }
-" (Optional) Multi-entry selection UI.
-Plug 'junegunn/fzf'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " SMT-LIB 2 syntax highlighting
 Plug 'bohlender/vim-smt2' 
+
+" Dafny syntax highlighting
+Plug 'mlr-msft/vim-loves-dafny', {'for': 'dafny'}
+
+" Julia support
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Autocomplete manager
 Plug 'ncm2/ncm2'
@@ -71,9 +73,6 @@ nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
-
-" Deoplete config
-let g:deoplete#enable_at_startup = 1
 
 " Language Server Config
 let g:LanguageClient_hoverPreview = 'Never'

@@ -4,7 +4,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'mhartington/oceanic-next'
+Plug 'rebelot/kanagawa.nvim'
 
 Plug 'scrooloose/nerdtree'
 
@@ -38,20 +38,15 @@ set expandtab
 set smarttab
 set shiftround
 
+" Theme
+colorscheme kanagawa
+
 " Show the line numbers
 set number
 
 set signcolumn=yes
 
-" Theme
-if (has("termguicolors"))
- set termguicolors
-endif
-
-syntax enable
 filetype plugin indent on
-
-colorscheme OceanicNext
 
 set hidden
 

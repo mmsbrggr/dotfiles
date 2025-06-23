@@ -98,11 +98,13 @@ fi
 alias vim="nvim"
 alias vi="nvim"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+# fnm
+FNM_PATH="/home/marcel/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/marcel/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
